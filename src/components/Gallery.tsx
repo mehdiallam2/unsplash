@@ -7,6 +7,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 
 const Gallery = () => {
   const [images, setImages] = useState<Data[]>([]);
+  const [columns, setColumns] = useState<Data[][]>([[]]);
   const [isLoading, setIsLoading] = useState(true);
 
   async function getImages() {
@@ -40,9 +41,27 @@ const Gallery = () => {
     }
   }
 
+  function createGridColumns(array: Data[], size: number) {
+    const fillers = [];
+
+    for (let i = 0; i < size; i++) {
+      fillers.push([]);
+    }
+
+    return array.reduce((ac: Data[][], value, index) => {
+      const colIdx = index % size;
+      ac[colIdx].push(value);
+      return ac;
+    }, fillers);
+  }
+
   useEffect(() => {
     getImages();
   }, []);
+
+  useEffect(() => {
+    setColumns(createGridColumns(images, 3));
+  }, [images]);
 
   return (
     <InfiniteScroll
@@ -57,8 +76,12 @@ const Gallery = () => {
       }
     >
       <div className="gallery">
-        {images.map((image: Data) => (
-          <Image data={image} loading={isLoading} />
+        {columns.map((columnImages) => (
+          <div className="column">
+            {columnImages.map((image: Data) => (
+              <Image data={image} loading={isLoading} />
+            ))}
+          </div>
         ))}
       </div>
     </InfiniteScroll>
