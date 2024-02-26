@@ -1,0 +1,426 @@
+@charset "UTF-8";
+
+:root {
+  --body-background: #ffffff;
+  --body-color: #0b0b28;
+  --blue: #0d6efd;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #d63384;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #198754;
+  --teal: #20c997;
+  --cyan: #0dcaf0;
+  --black: #000000;
+  --white: #ffffff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --gray-100: #f8f9fa;
+  --gray-200: #e9ecef;
+  --gray-300: #dee2e6;
+  --gray-400: #ced4da;
+  --gray-500: #adb5bd;
+  --gray-600: #6c757d;
+  --gray-700: #495057;
+  --gray-800: #343a40;
+  --gray-900: #212529;
+  --primary: #f5c98f;
+  --secondary: #2a1400;
+  --success: #198754;
+  --info: #0dcaf0;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #212529;
+  --primary-rgb: 13, 110, 253;
+  --secondary-rgb: 108, 117, 125;
+  --success-rgb: 25, 135, 84;
+  --info-rgb: 13, 202, 240;
+  --warning-rgb: 255, 193, 7;
+  --danger-rgb: 220, 53, 69;
+  --light-rgb: 248, 249, 250;
+  --dark-rgb: 33, 37, 41;
+  --white-rgb: 255, 255, 255;
+  --black-rgb: 0, 0, 0;
+  --body-color-rgb: 33, 37, 41;
+  --body-bg-rgb: 255, 255, 255;
+  --sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue",
+    "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji",
+    "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+}
+
+:root {
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  :root {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background-color: var(--body-background);
+  color: var(--body-color);
+  font-family: "Montserrat", system-ui, -apple-system, "Segoe UI", Roboto,
+    "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.header {
+  padding: 1.25rem 1.75rem;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-logo {
+  display: flex;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.nav-link,
+.card-download {
+  display: flex;
+  padding: 0.625rem;
+  background-color: var(--gray-900);
+  border-radius: 50%;
+  transition: ease 300ms all;
+}
+
+.nav-link:hover {
+  background-color: var(--gray-800);
+  scale: 1.1;
+}
+
+.nav-svg {
+  fill: white;
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
+
+.footer {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: solid 1px rgb(28, 44, 60);
+  font-weight: 500;
+}
+
+.footer-container {
+  display: grid;
+  grid-gap: 2rem;
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.footer-logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  display: block;
+  color: white;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  max-width: 25rem;
+}
+
+.footer-disclaimer {
+}
+.footer-disclaimer-title {
+  margin-bottom: 0.75rem;
+  color: var(--white);
+  font-weight: 600;
+}
+
+.footer-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  grid-column: span 2;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.footer-nav-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.75rem;
+  transition: 300ms easy all;
+}
+
+.footer-nav-link:hover {
+  color: var(--white);
+}
+.footer-nav-link:last-child {
+  margin-left: auto;
+}
+
+.footer-nav-link svg {
+  width: 1.5rem;
+}
+
+.footer-nav-link-svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.footer-nav-link-name {
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .footer-container {
+    grid-template-columns: 1fr 1fr;
+    margin-left: 8rem;
+    margin-right: 8rem;
+  }
+
+  .footer-disclaimer {
+    text-align: right;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 576px) {
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
+
+.images-grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 1rem;
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+
+.card {
+  position: relative;
+  max-width: 30rem;
+  overflow: hidden;
+}
+
+.card:hover .card-download {
+  opacity: 1;
+}
+
+.card-download {
+  opacity: 0;
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: #ffffffe6;
+  display: flex;
+  padding: 4px 12px;
+  border-radius: 0.25rem;
+  transition: ease all 300ms;
+}
+
+.card-download:hover {
+  background-color: #ffffff;
+}
+
+.card-download-svg {
+  fill: currentColor;
+  width: 1rem;
+  height: 1.5rem;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--gray-100);
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  max-width: 35rem;
+}
+
+.search-title {
+  margin-left: 4.75rem;
+  margin-right: 4.75rem;
+  font-weight: 700;
+  line-height: 2.5rem;
+  font-size: 2.25rem;
+  text-align: center;
+  color: var(--body-color);
+  min-width: 30rem;
+  min-height: 7rem;
+}
+
+.search-icon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.search-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  background-color: var(--gray-900);
+  border-radius: 1.75rem;
+  width: 100%;
+}
+
+.search-bar-search-icon {
+  position: absolute;
+  left: 1.25rem;
+  width: 1rem;
+  fill: var(--gray-100);
+}
+
+.search-input {
+  padding: 1rem 0.5rem 1rem 3rem;
+  color: white;
+  width: 100%;
+}
+
+.search-input::placeholder {
+  color: var(--gray-100);
+}
+
+.search-delete {
+  position: absolute;
+  right: 0.5rem;
+  display: flex;
+  padding: 0.75rem;
+  border-radius: 50%;
+  transition: ease 300ms all;
+}
+
+.search-delete:hover {
+  color: white;
+  background-color: rgb(23, 23, 40);
+}
+
+.image img {
+  object-fit: contain;
+}
+.card {
+  /* background-color: var(--black); */
+}
+
+.gallery {
+  max-width: 80rem;
+  margin: 7rem auto;
+  display: grid;
+  /* grid-template-columns: repeat(auto-fill, minmax(15.625rem, 1fr)); */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+
+
+.overlay {
+  display: none;
+  opacity: 0;
+  pointer-events: hover;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    180deg,
+    #00000057 0,
+    rgba(0, 0, 0, 0.338) 3.5%,
+    rgba(0, 0, 0, 0.324) 7%,
+    rgba(0, 0, 0, 0.306) 10.35%,
+    rgba(0, 0, 0, 0.285) 13.85%,
+    rgba(0, 0, 0, 0.262) 17.35%,
+    rgba(0, 0, 0, 0.237) 20.85%,
+    rgba(0, 0, 0, 0.213) 24.35%,
+    rgba(0, 0, 0, 0.188) 27.85%,
+    rgba(0, 0, 0, 0.165) 31.35%,
+    rgba(0, 0, 0, 0.144) 34.85%,
+    rgba(0, 0, 0, 0.126) 38.35%,
+    rgba(0, 0, 0, 0.112) 41.85%,
+    rgba(0, 0, 0, 0.103) 45.35%,
+    #0000001a 48.85%,
+    rgba(0, 0, 0, 0.103) 52.35%,
+    rgba(0, 0, 0, 0.112) 55.85%,
+    rgba(0, 0, 0, 0.126) 59.35%,
+    rgba(0, 0, 0, 0.144) 62.85%,
+    rgba(0, 0, 0, 0.165) 66.35%,
+    rgba(0, 0, 0, 0.188) 69.85%,
+    rgba(0, 0, 0, 0.213) 73.35%,
+    rgba(0, 0, 0, 0.237) 76.85%,
+    rgba(0, 0, 0, 0.262) 80.35%,
+    rgba(0, 0, 0, 0.285) 83.85%,
+    rgba(0, 0, 0, 0.306) 87.35%,
+    rgba(0, 0, 0, 0.324) 90.85%,
+    rgba(0, 0, 0, 0.338) 94.35%,
+    rgba(0, 0, 0, 0.347) 97.85%,
+    #00000059
+  );
+  transition: ease-in-out 300ms all;
+}
+
+
+.overlay:hover {
+  opacity: 1;
+  pointer-events: all;
+}
