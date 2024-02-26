@@ -1,5 +1,4 @@
 import Header from "../components/Header";
-import Search from "../components/Search";
 import Gallery from "../components/Gallery";
 import Footer from "../components/Footer";
 
